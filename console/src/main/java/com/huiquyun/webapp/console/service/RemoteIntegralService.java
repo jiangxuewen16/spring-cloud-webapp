@@ -5,6 +5,6 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 
 
-@FeignClient("saas-inergra")
+@FeignClient("saas-inergral")
 public interface RemoteIntegralService extends IntegralService {
 }
