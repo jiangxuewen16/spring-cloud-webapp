@@ -15,6 +15,7 @@ public class HomeController {
         this.remoteIntegralService = remoteIntegralService;
     }
 
+
     @GetMapping("/user/score/{userId}")
     public Integer userScore(@PathVariable Integer userId) {
         return this.remoteIntegralService.getUserScore(userId);
