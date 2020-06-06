@@ -1,0 +1,7 @@
+server:
+  port: 9001
+
+logging:
+  level:
+    org.springframework.web: trace
+

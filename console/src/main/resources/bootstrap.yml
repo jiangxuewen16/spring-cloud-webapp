@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    consul:
+      host: 192.168.18.245
+      port: 8500
+      config:
+        enabled: true
+        format: yaml
+        prefix: config
+        default-context: console
+        data-key: data
+      discovery:
+        register: true
+        serviceName: ${spring.application.name}
+        tags: version=1.0,author=jxw
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 5s
+        # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        ip-address: true  #允许ip地址注册
+
+    loadbalancer:
+      ribbon:
+        enabled: false
